@@ -142,7 +142,7 @@ export class LevelsScene extends Phaser.Scene {
         this.physics.add.overlap(
             this.player,
             this.collectibles,
-            this.collectItem,
+            this.collectItem as unknown as Phaser.Types.Physics.Arcade.ArcadePhysicsCallback,
             undefined,
             this
         );
